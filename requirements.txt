@@ -1,26 +1,67 @@
-# Multi-Modal RAG Chatbot Requirements
-# Core dependencies for hackathon dashboard
+ Complete dependencies for all features including CLIP, student document processing
 
-# Web Framework
+# Core Framework
 flask==2.3.3
 flask-cors==4.0.0
-werkzeug==2.3.7
-
-# Environment & Config
 python-dotenv==1.0.0
 
-# AI & ML - REQUIRED
+# AI/ML Core
 google-generativeai==0.3.2
+sentence-transformers==2.2.2
+numpy==1.24.3
+scikit-learn==1.3.2
+
+# CLIP for Multimodal Embeddings
+transformers==4.35.2
+torch==2.1.0
+torchvision==0.16.0
+# For OpenAI CLIP
+git+https://github.com/openai/CLIP.git
+
+# Vector Database
 qdrant-client==1.6.9
 
-# Image Processing - REQUIRED
-Pillow==10.1.0
-
-# Audio Processing - REQUIRED
+# Student Document Processing
+# Audio Processing
 SpeechRecognition==3.10.0
+pydub==0.25.1
+pyaudio==0.2.11
 
-# Document Processing - REQUIRED
+# Advanced Video Processing
+opencv-python==4.8.1.78
+
+# Enhanced Image Processing & OCR
+Pillow==10.1.0
+pytesseract==0.3.10
+pdf2image==1.16.3
+
+# Document Processing (Student Materials)
 PyPDF2==3.0.1
+python-docx==1.1.0
 
-# Basic utilities
+# Web Framework
+werkzeug==2.3.7
+
+# Web Search & API Integration
 requests==2.31.0
+beautifulsoup4==4.12.2
+googlesearch-python==1.2.3
+duckduckgo-search==3.9.6
+
+# Image Captioning (BLIP)
+# Note: This is optional and heavy - comment out if not needed
+# git+https://github.com/salesforce/BLIP.git
+
+# Utilities (built-in Python modules)
+# asyncio - built-in
+# threading - built-in  
+# pathlib - built-in
+# datetime - built-in
+# base64 - built-in
+# tempfile - built-in
+# dataclasses - built-in
+# logging - built-in
+
+# Optional: For better performance
+# accelerate==0.24.1
+# datasets==2.14.6
